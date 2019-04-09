@@ -1,0 +1,11 @@
+.container {
+  background-color: #FAAC58 ;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Noto Serif TC', serif;
+  color: white;
+}
+.card-body{
+  font-family: 'Playfair Display', serif;
+  font-family: 'Noto Serif TC', serif;
+  color: black;
+}

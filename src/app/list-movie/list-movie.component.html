@@ -1,0 +1,23 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light m-3">
+    <a class="navbar-brand" [routerLink]="['/']" >The Movie DB</a>
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" [(ngModel)]="query" (ngModelChange)="search($event)">
+    </nav>
+  <div class="row">  
+     <div class="card col-lg-3 mb-2" *ngFor="let movie of list_movie.results">
+      <img src="https://image.tmdb.org/t/p/w300/{{movie.backdrop_path}}" class="mr-2" style="width: 90wh">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ movie.title }} 
+        </h5>
+
+        <div class="position-static">
+          <button 
+           type="button" class="btn btn-primary btn-lg btn-block .col-md-6 .offset-md-3" (click)="movieDetails(movie)">
+            Detalhes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
